@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: "Assets/Scenes/MenuG\u0142\xF3wne.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: a261a3455b7322c418703d2c84f686c2
+  - enabled: 1
+    path: Assets/Scenes/Gra/StartGry.unity
+    guid: c971e059eb268b6469db7e4a08ac9f7e
+  - enabled: 1
+    path: Assets/Scenes/Gra/Ruiny/Ruiny1.unity
+    guid: a420d781b7093d144949a69e562bf3e4
   m_configObjects: {}
