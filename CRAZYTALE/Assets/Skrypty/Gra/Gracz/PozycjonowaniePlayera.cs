@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PozycjonowaniePlayera : MonoBehaviour
@@ -11,31 +12,22 @@ public class PozycjonowaniePlayera : MonoBehaviour
         Poz.y = Input.GetAxisRaw("Vertical");
         Poz.x = Input.GetAxisRaw("Horizontal");
 
-        gameObject.transform.position += new Vector3(Poz.x, Poz.y, 0) * Time.deltaTime;
 
-        //if (Poz.x > 0.01)
-        //{
-        //    gameObject.transform.position += new Vector3(speed, 0, 0);
-        //}
-        //if (Poz.x > 0.01)
-        //{
-        //    gameObject.transform.position += new Vector3(-speed, 0, 0);
-        //}
-        //if (Poz.y > 0.01)
-        //{
-        //    gameObject.transform.position += new Vector3(0, speed, 0);
-        //}
-        //if (Poz.y < 0.01)
-        //{
-        //    gameObject.transform.position += new Vector3(0, -speed, 0);
-        //}
-
-        if (anim.GetBool("Sleeping") && Poz.sqrMagnitude > 0.01)
-        {
-            anim.SetBool("Sleeping", false);
-        }
+        
         anim.SetFloat("Horizontal", Poz.x);
         anim.SetFloat("Vertical", Poz.y);
         anim.SetFloat("speed", Poz.sqrMagnitude);
+    }
+    private void FixedUpdate()
+    {
+        PlayerRB.MovePosition(PlayerRB.position + Poz * speed * Time.fixedDeltaTime);
+    }
+    Boolean Key(KeyCode key)
+    {
+        if (Input.GetKey(key))
+        {
+            return true;
+        }
+        return false;
     }
 }

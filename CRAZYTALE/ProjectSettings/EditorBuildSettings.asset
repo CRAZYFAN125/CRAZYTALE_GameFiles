@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gra/Ruiny/Ruiny1.unity
     guid: a420d781b7093d144949a69e562bf3e4
+  - enabled: 1
+    path: Assets/Scenes/Gra/Ruiny/Ruiny2.unity
+    guid: 8bac66c1e4863fb42b20d6b16bd39519
   m_configObjects: {}
