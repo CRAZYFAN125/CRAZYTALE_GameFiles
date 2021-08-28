@@ -19,5 +19,6 @@ public class PlayerGui:MonoBehaviour{
         }
         #endregion
         
+        
     }
 }
