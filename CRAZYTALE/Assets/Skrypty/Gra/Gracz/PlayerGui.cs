@@ -6,6 +6,9 @@ public class PlayerGui:MonoBehaviour{
     public GameObject Pauza;
     private bool isPaused = false;
     public KeyCode PauseKey = KeyCode.Escape;
+    [Header("Dialog:")]
+    public string Text;
+    
     
     public void PauseGame(){
         isPaused = !isPaused;
