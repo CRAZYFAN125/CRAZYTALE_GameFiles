@@ -17,7 +17,7 @@ public class PlayerGui:MonoBehaviour{
     
     void Update(){
         #region PauzaKeyingCheck
-        if(isPaused = false){
+        if(isPaused == false){
             PauseGame();
         }
         #endregion
