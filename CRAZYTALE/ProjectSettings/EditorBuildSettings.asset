@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: a261a3455b7322c418703d2c84f686c2
   - enabled: 1
-    path: Assets/Scenes/Gra/StartGry.unity
-    guid: c971e059eb268b6469db7e4a08ac9f7e
-  - enabled: 1
     path: Assets/Scenes/Gra/Ruiny/Ruiny1.unity
     guid: a420d781b7093d144949a69e562bf3e4
   - enabled: 1

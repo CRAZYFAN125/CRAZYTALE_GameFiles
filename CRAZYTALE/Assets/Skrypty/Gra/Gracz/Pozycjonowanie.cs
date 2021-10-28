@@ -12,21 +12,28 @@ public class Pozycjonowanie : MonoBehaviour
     public Transform Player;
     void FixedUpdate()
     {
-        #region Pod¹rzanie
+        #region Podarzanie
         if (!ZaGraczem)
         {
+            return;
+        }
+        if (LockPlus == null || LockMinus == null)
+        {
+            Ruch();
             return;
         }
         if (Player.position.x <= LockPlus.position.x && Player.position.y<=LockPlus.position.y)
         {
             if (Player.position.x >= LockMinus.position.x && Player.position.y >= LockMinus.position.y)
             {
-                Vector3 v = Player.position;
-                v.z = -10;
-                Cam.position = v;
+                Ruch();
             }
         }
         #endregion
     }
-    
+    void Ruch(){
+        Vector3 v = Player.position;
+                v.z = -10;
+                Cam.position = v;
+    }
 }

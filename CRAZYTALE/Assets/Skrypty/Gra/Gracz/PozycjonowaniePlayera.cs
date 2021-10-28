@@ -13,7 +13,14 @@ public class PozycjonowaniePlayera : MonoBehaviour
         Poz.x = Input.GetAxisRaw("Horizontal");
 
 
-        
+        if (Tp.teleport)
+        {
+            anim.SetFloat("Horizontal", 0);
+            anim.SetFloat("Vertical", 0);
+            anim.SetFloat("speed", 0);
+            Tp.teleport = false;
+            return;
+        }
         anim.SetFloat("Horizontal", Poz.x);
         anim.SetFloat("Vertical", Poz.y);
         anim.SetFloat("speed", Poz.sqrMagnitude);
