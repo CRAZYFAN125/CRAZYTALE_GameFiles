@@ -15,26 +15,20 @@ public class PozycjonowaniePlayera : MonoBehaviour
 
         if (Tp.teleport)
         {
-            anim.SetFloat("Horizontal", 0);
-            anim.SetFloat("Vertical", 0);
-            anim.SetFloat("speed", 0);
+            SetAnim(0, 0, 0);
             Tp.teleport = false;
             return;
         }
-        anim.SetFloat("Horizontal", Poz.x);
-        anim.SetFloat("Vertical", Poz.y);
-        anim.SetFloat("speed", Poz.sqrMagnitude);
+        SetAnim(Poz.x,Poz.y,Poz.sqrMagnitude);
     }
     private void FixedUpdate()
     {
         PlayerRB.MovePosition(PlayerRB.position + Poz * speed * Time.fixedDeltaTime);
     }
-    Boolean Key(KeyCode key)
+    public void SetAnim(float _x, float _y, float _speed)
     {
-        if (Input.GetKey(key))
-        {
-            return true;
-        }
-        return false;
+        anim.SetFloat("Horizontal", _x);
+        anim.SetFloat("Vertical", _y);
+        anim.SetFloat("speed", _speed);
     }
 }
